@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
+import { backURL } from '../interfaces/data';
 
 @Component({
   selector: 'app-landing-page',
@@ -8,9 +11,9 @@ import { Router } from '@angular/router';
 })
 export class LandingPageComponent {
   showOverlay = false;
-  email = '';
+  email: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
   ngOnInit() {
    
@@ -20,10 +23,14 @@ export class LandingPageComponent {
   }
 
   onSubmit() {
-   
     console.log('Email submitted:', this.email);
- 
+    this.http.post(`${backURL}email`, {email: this.email}).subscribe(gotit => {
+      console.log(gotit);
+      this.email = '';
+      alert('Thanks we got your email!')
+    })
   }
+
   redir() {
  
     this.router.navigate(['/landing']);

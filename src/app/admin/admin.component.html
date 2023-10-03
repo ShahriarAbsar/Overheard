@@ -1,0 +1,19 @@
+<div style="text-align: center;" *ngIf="!authenticated; else elseBlock ">
+    <h4>Input Admin Password</h4>
+    <input type="password" [(ngModel)]="password">
+    <br><br>
+    <button (click)="onVerify()">Submit</button>
+</div>
+
+<ng-template #elseBlock>
+    <div style="font-size: larger;">
+        <h2>
+            Emails
+        </h2>
+        <ul>
+            <li *ngFor="let em of emails">
+                {{em.email}}
+            </li>
+        </ul>
+    </div>
+</ng-template>

@@ -1,0 +1,1 @@
+export const backURL: string = 'http://localhost:3002/'
