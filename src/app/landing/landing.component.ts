@@ -17,11 +17,10 @@ export class LandingComponent {
 
 
   onSubmit() {
-    console.log('Email submitted:', this.email);
-    this.http.post(`${backURL}email`, {email: this.email}).subscribe(gotit => {
-      console.log(gotit);
-      this.email = '';
-      alert('Thanks we got your email!')
-    })
+    console.log('hi')
+    this.router.navigate(
+      ['/'],
+      {'queryParams': {toggleTime: 500}}
+    )
   }
 }
