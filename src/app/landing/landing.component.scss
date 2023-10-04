@@ -74,14 +74,6 @@ body {
   top: 2763px;
 }
 
-
-
-
-
-
-
-
-
 .never-miss-a-moment-with-your-friends {
   color: #000000;
   text-align: center;
@@ -159,7 +151,8 @@ body {
   margin-top: 0;
   margin-left: 0;
   height: 10rem;
-  width: 31rem;
+  width: 30.5rem;
+
   position: fixed;
   top: -30px;
   left: -36px;
@@ -178,7 +171,7 @@ body {
 }
 
 /* Media query for screens between 200px and 500px */
-@media screen and (min-width: 501px) and (max-width: 451px) {
+@media screen and (max-width: 250px) {
       body{
             margin: 0;
             padding: 0;
@@ -211,4 +204,5 @@ body {
         width: 90px; /* Adjust width for mobile */
       }
     }
+    
     
