@@ -25,7 +25,7 @@ export class LandingPageComponent {
       } else {
         setTimeout(() => {
           this.showOverlay = true;
-        }, 5000);
+        }, 50);
       }
     })
   }
